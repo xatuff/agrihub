@@ -1,0 +1,628 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #e5e5e5;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    z-index: 1;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #2c2c2c;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 8px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar .closebtn:hover {
+    background-color: #2563eb;
+}
+
+.sidebar .logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-weight: 700;
+}
+
+/* **Menu Button Styling** */
+.openbtn {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* **Menu Button Hover Effect** */
+.openbtn:hover {
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 8px;
+}
+
+/* Main Content Styling */
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 28px;
+    color: #3b82f6;
+    margin-bottom: 10px;
+}
+
+.content {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .sidebar {
+    background-color: #333;
+}
+
+body.dark-mode .sidebar a {
+    color: #fff;
+}
+
+body.dark-mode .sidebar a:hover {
+    background-color: #555;
+}
+
+/* Table Styling */
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dashboard-table th, .dashboard-table td {
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+.dashboard-table th {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.dashboard-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.dashboard-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.dashboard-table td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* View Button */
+.view-button {
+    padding: 6px 12px;
+    background-color: #3b82f6; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-button:hover {
+    background-color: #274b83; /* Light Yellow */
+}
+
+/* Delete Button */
+.delete-button {
+    padding: 6px 12px;
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f; /* Darker Red */
+}
+
+/* Modal for image preview */
+.modal-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.download-button {
+    padding: 10px 20px;
+    background-color: #3bf64e; /* Bright Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #2563eb; /* Blue on hover */
+}
+
+/* Initially hide all sections */
+.content-section {
+    display: none;
+}
+
+/* Display the active section */
+.content-section.active {
+    display: block;
+}
+
+/* Style for navigation buttons */
+a {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #000;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Set a max-width for better responsiveness */
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalImage {
+    display: block;
+    margin: 20px auto; /* Add spacing between the image and the button */
+    max-width: 100%;
+    height: auto;
+}
+
+/* New Styling for the Button Container */
+.modal-button-container {
+    margin-top: 20px; /* Space between image and button */
+}
+
+
+/* Download Button Styling (matching 'view' button) */
+.download-button {
+    padding: 15px 30px; /* Increase the padding to make the button 50% bigger */
+    color: white;
+    background-color: #3b82f6; /* Green theme */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em; /* Increase font size for a bigger button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%; /* Make the button width 50% of the modal */
+    margin: 20px auto 0; /* Center the button and add top margin */
+}
+
+.download-button:hover {
+    background-color: #274b83;
+}
+
+/*GRAPH*/
+/* Styling the graph container */
+#graph-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#container {
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.temp-input {
+    padding: 10px;
+    margin-right: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 120px;
+    font-size: 14px;
+    color: #333;
+}
+
+.temp-input:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.submit-btn {
+    padding: 12px 25px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Ensure the canvas elements are responsive and have fixed height */
+/* Ensure the canvas elements are responsive and have fixed height */
+
+#weatherChart {
+    width: 100% !important;  
+    height: 400px !important; 
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#humidityChart {
+    width: 100% !important;  
+    height: 400px !important; 
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#soilmoistureChart {
+    width: 100% !important;  
+    height: 400px !important; 
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pressureChart {
+    width: 100% !important;  
+    height: 400px !important; 
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Ensure the graph container itself has the right size and padding */
+#graph-container {
+    display: block;
+    width: 100%;
+    max-width: 100%; /* Ensure the container doesn't exceed screen width */
+    margin: 20px auto;  /* Center the container */
+}
+
+/* Stretch the canvas by modifying container width */
+#container {
+    display: block;
+    width: 100%;
+    max-width: 1200px; /* Or whatever size you want for the canvas container */
+    margin: 0 auto;
+}
+
+/* Grid for graphs (2x2 layout) */
+#charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+    gap: 30px; /* Space between charts */
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Additional chart container tweaks to prevent stretching */
+.chart-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 100%;  /* Ensure each chart container stretches across available space */
+}
+
+/* Responsive input containers */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Ensure inputs fill their container properly */
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.footer {
+    font-size: 14px;
+    color: #777;
+    margin-top: 15px;
+}
+
+/*weather*/
+
+/* Weather Section Layout */
+.weather-section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weather-section h3 {
+    font-size: 1.8rem;  /* Increased size */
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Adjusting the forecast items */
+.forecast {
+    display: flex;
+    flex-wrap: nowrap;  /* No wrap to ensure all items stay in one row */
+    justify-content: space-between;  /* Distribute items evenly */
+    gap: 20px;  /* Space between items */
+    overflow-x: auto; /* If screen is narrow, allow horizontal scrolling */
+}
+
+.forecast-item {
+    flex: 1 1 calc(20% - 10px); /* Ensure items take equal width */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.forecast-item:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+.forecast-item img {
+    width: 60px;
+    height: 60px;
+    margin: 10px 0;
+}
+
+.forecast-item p {
+    margin: 5px 0;
+    font-size: 1rem; /* Slightly larger text */
+    color: #34495e;
+    text-transform: uppercase; /* Ensures text is in uppercase */
+
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 40px; /* Larger font for the logo */
+    font-weight: 700;
+    color: #3b82f6;
+    text-align: center;
+    margin-top: 30px;  /* Provide space from top */
+}
+
+.logo img {
+    max-width: 200px; /* Ensure logo image is larger */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* THIS IS ALL THE MAP IS GOING */
+#google-map {
+    width: 100%;            /* Full width */
+    height: 400px;          /* Set a height for the map */
+    margin-top: 20px;       /* Space from the top */
+    border-radius: 8px;     /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better separation */
+}
+
+#windy {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    margin-top: 20px; /* Add some spacing from the time display */
+}
+
+/* Button styling */
+.button-style {
+    background-color: #3642c7; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove borders */
+    padding: 10px 20px; /* Padding for better appearance */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.button-style:hover {
+    background-color: #14194b; /* Slightly darker green on hover */
+}
+
+.notification-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 25px; /* Increased padding */
+    border-radius: 8px; /* Slightly larger border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    max-width: 400px; /* Increased width */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Bold text for better visibility */
+    text-align: center; /* Center align the text */
+}
+
+.notification-box.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.notification-box.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*User Setting*/
+.user-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+form {
+    margin-top: 15px;
+}
+form input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+.map-container {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
