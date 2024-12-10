@@ -2,7 +2,6 @@
 Agriculture-themed robot helping farmers observing their farm from afar. Project based on Arduino microcontroller. 
 Special thanks to my beloved project members: Hureen and Umar for making everything possible. <br>
 Website Design can be found here: https://github.com/xatuff/agrihub/tree/Website <br>
-Arduino Code can be found here: https://github.com/xatuff/agrihub/tree/Website
 
 
 
@@ -37,12 +36,16 @@ Image Analyzer :
 ![Screenshot 2024-11-15 112359](https://github.com/user-attachments/assets/7caff123-999e-46d3-8e3f-9ea6bce8ac98)
 ![Screenshot 2024-11-15 112346](https://github.com/user-attachments/assets/f33cd56d-ccf8-460a-bdd8-c0790c3ebf35)
 
+Everytime user fetch data it will upload it to the telegram using the created bot:
+<br><br>
+![image](https://github.com/user-attachments/assets/32492694-f76d-4016-8bea-1ee62385a2e4)
+
 <br>
 To people who want to use our website functionally. Please generate the API key/Cloud Address below and replace it in the coding, I commented every api key you need to replace in the coding.
 Fear not, every API key is free to use for personal use
 <br>
 CONFIG.PHP : Firebase realtime database<br>
-NEWDASHBOARD.PHP : Google Map API Key ( ENABLE JAVASCRIPT IN THE GOOGLE MAP ) , Open Weather API, Windy Map API.<br>
+NEWDASHBOARD.PHP : Google Map API Key ( ENABLE JAVASCRIPT IN THE GOOGLE MAP ) , Open Weather API, Windy Map API and Telegram bot API. <br>
 RESPONSE.PHP: Google Gemini API Key<br>
 <br>
 Image Analyzer : ( Uploading soon, coding hosted on streamlit )
