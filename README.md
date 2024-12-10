@@ -1,6 +1,8 @@
 # agrihub
 Agriculture-themed robot helping farmers observing their farm from afar. Project based on Arduino microcontroller. 
-Special thanks to my beloved project members: Hureen and Umar for making everything possible. 
+Special thanks to my beloved project members: Hureen and Umar for making everything possible. <br>
+Website Design can be found here: https://github.com/xatuff/agrihub/tree/Website <br>
+Arduino Code can be found here: https://github.com/xatuff/agrihub/tree/Website
 
 
 
