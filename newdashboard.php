@@ -183,7 +183,7 @@ if ($insert) {
     
 
     // Your bot's token that you got from @BotFather
-    $apiToken = "7543181789:AAF2P1v1dVbADU32P8j41_e-GsPyCD9cr48";  // Replace with your actual bot token
+    $apiToken = "telegram API";  // Replace with your actual bot token
     
     // Send the text message to Telegram first
     $dataMessage = [
@@ -439,7 +439,7 @@ for ($i = 0; $i < 5; $i++) {
     }
 }
 $locationset  = isset($user['locationset']) ? $user['locationset'] : "Kluang";
-$apiKey2 = "c26b2ca27b0257c9999ba8f46fc56676";
+$apiKey2 = "API HERE";
 $apiUrl2 = "https://api.openweathermap.org/data/2.5/forecast?q={$locationset}&appid={$apiKey2}&units=metric";
 
 // Get the weather data
@@ -1357,7 +1357,7 @@ updatePressureGraph();
 </section>
 
 <!-- Include Google Maps API with your API Key -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-wQBhEZFPG_h7PH-_nl_D3RGjBWqfvgs&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=API HERE&callback=initMap" async defer></script>
 
 <script>
     // Function to initialize the Google Map
@@ -1688,7 +1688,7 @@ updatePressureGraph();
     const longitude = <?php echo isset($_SESSION['user']['currentlng']) ? $_SESSION['user']['currentlng'] : 101.9758; ?>;
 
     const options = {
-        key: '9R5QVEl5y5rToJWKVsIyEiY5AYr4RpKh', // REPLACE WITH YOUR WINDY KEY
+        key: 'API KEY HERE', // REPLACE WITH YOUR WINDY KEY
         verbose: true,
         lat: latitude,
         lon: longitude,
