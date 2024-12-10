@@ -33,7 +33,7 @@ Fear not, every API key is free to use for personal use.
 CONFIG.PHP : Firebase realtime database
 NEWDASHBOARD.PHP : Google Map API Key ( ENABLE JAVASCRIPT IN THE GOOGLE MAP ) , Open Weather API, Windy Map API.
 RESPONSE.PHP: Google Gemini API Key
-
+\n\n\n\n
 Image Analyzer : ( Uploading soon, coding hosted on streamlit )
 
 
