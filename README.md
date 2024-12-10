@@ -26,6 +26,7 @@ This is an attachment of the design of the website. Works best with dark mode.
 ![Screenshot 2024-12-01 141348](https://github.com/user-attachments/assets/e6877993-5991-4e37-a247-ddefee684494)
 
 <h2>Simple User Setting. Each User can setup as many time they want, the website will fetch the data automatically for every time user has set and store it in to cloud database.</h2>
+
 ![Screenshot 2024-12-06 163044](https://github.com/user-attachments/assets/655d87a7-4eaa-4b52-801a-0ce2f41c9d65)
 
 Image Analyzer :
